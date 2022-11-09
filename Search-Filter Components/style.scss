@@ -1,0 +1,257 @@
+@import "https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #303236;
+    font-family: "Muli";
+}
+
+.component--search {
+    background: #3D3F43;
+    border-radius: 15px;
+    padding: 40px 45px;
+    box-shadow: 0 15px 25px -20px #202125;
+    form {
+        position: relative;
+        margin-bottom: 30px;
+
+        .search-icon {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 53px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            padding-left: 53px;
+            height: 50px;
+            width: 100%;
+            background: #303236;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+            color: #fff;
+            caret-color: red;
+
+            &:focus {
+                outline: 0;
+            }
+
+            &::placeholder {
+                color: rgba(#fff, .5);
+            }
+        }
+    }
+
+    h6 {
+        font-size: 12px;
+        font-weight: bold;
+        color: #fff;
+        text-transform: uppercase;
+    }
+
+    ul {
+        margin-top: 13px;
+
+        li {
+            list-style: none;
+
+            a {
+                display: block;
+                text-decoration: none;
+                font-size: 16px;
+                color: #fff;
+                padding: 7px 0;
+
+                &:hover {
+                    color: #2CCDEA;
+                    font-weight: bold;
+                }
+            }
+
+            &.active a {
+                color: #2CCDEA;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.component--filter-search {
+    background: #3D3F43;
+    border-radius: 5px;
+
+
+    form {
+        padding: 14px;
+        height: 68px;
+        display: flex;
+
+        .input {
+            display: flex;
+            align-items: center;
+            flex: 1;
+
+            .search-icon {
+                width: 50px;
+                text-align: center;
+            }
+
+            input {
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                height: 40px;
+                font-size: 16px;
+                color: #fff;
+                caret-color: red;
+
+                &:focus {
+                    outline: 0;
+                }
+
+                &::placeholder {
+                    color: rgba(#fff, .5);
+                }
+            }
+
+        }
+
+        ul {
+            display: flex;
+            margin-left: 15px;
+
+            li {
+                list-style: none;
+
+                label {
+                    input {
+                        display: none;
+
+                        &:checked+.text {
+                            background-color: #303236;
+                            color: #2CCDEA;
+                        }
+                    }
+
+                    .text {
+                        display: block;
+                        height: 40px;
+                        line-height: 40px;
+                        padding: 0 25px;
+                        font-size: 16px;
+                        color: #fff;
+                        cursor: pointer;
+                        border-radius: 40px;
+                        transition:400ms background-color,400ms color ;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.component--filter {
+    background: #3D3F43;
+    border-radius: 15px;
+    padding: 40px 45px;
+    box-shadow: 0 15px 25px -20px #202125;
+
+    form {
+        ul {
+            li {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                a {
+                    text-decoration: none;
+                }
+
+                &:not(last-child) {
+                    margin-bottom: 20px;
+                }
+
+                .key {
+                    width: 100px;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #fff;
+                }
+
+                .value {
+                    flex: 1;
+
+                    input,
+                    select {
+                        padding-left: 20px;
+                        height: 50px;
+                        width: 100%;
+                        background: #303236;
+                        border-radius: 5px;
+                        border: none;
+                        font-size: 16px;
+                        color: #fff;
+                        caret-color: red;
+
+                        option {
+                            background: #303236;
+                        }
+
+                        &:focus {
+                            outline: 0;
+                        }
+
+                        &::placeholder {
+                            color: rgba(#fff, .5);
+                        }
+
+                    }
+
+                    select {
+                        cursor: pointer;
+                        appearance: none;
+                        background: #303236 url(img/arrow-down.svg) no-repeat calc(100% - 30px) center;
+                    }
+
+                }
+                &.filter-button{
+                    margin-top: 40px;
+                    border-top:1px solid #303236 ;
+                    padding-top: 25px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        color: rgba(#fff,.5);
+                        font-size: 16px;
+                        &:hover{
+                            color: #fff;
+                        }
+                    }
+                    button{
+                        border: none;
+                        height: 50px;
+                        padding:0 30px ;
+                        display: flex;
+                        align-items: center;
+                        background: linear-gradient(to right,#31A5D9,#1E96A0);
+                        font-size: 16px;
+                        color: #fff;
+                        border-radius: 50px;
+                        cursor: pointer;
+                        box-shadow: 0 7px 10px 0 rgba(#2B2D30,.5);
+                    }
+                }
+            }
+        }
+    }
+}
