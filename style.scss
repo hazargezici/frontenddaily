@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box !important;
+}
+
+body {
+    background-color: #EEEEEE;
+    color: #222831;
+}
+
+.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00ADB5;
+    width: 250px;
+    height: 150px;
+    background: #8360c3;
+    background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);
+    background: linear-gradient(to right, #2ebf91, #8360c3);
+
+    a {
+        display: flex;
+        color: #fff;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: 500;
+
+        &:hover {
+            color: #393E46;
+        }
+
+    }
+}
